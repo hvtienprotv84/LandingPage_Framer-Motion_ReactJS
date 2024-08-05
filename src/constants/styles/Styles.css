@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    * { 
+        @apply select-none leading-[1.5] [color-scheme:dark];
+    }
+    
+    :root { 
+        @apply ease-in-out bg-zinc-900;
+    }
+    
+    body { 
+        @apply p-0 m-0 w-full;
+    }
+
+    .background { @apply dark:bg-zinc-950 }
+
+    .snapScroll { @apply lg:snap-always lg:snap-center }
+
+    /* Front */
+    .motionContainer { 
+        @apply relative flex flex-col gap-4 items-center justify-center px-4
+    }
+
+    .container {
+        @apply absolute flex flex-row min-h-screen justify-center items-center max-w-4xl mx-auto pb-20;
+    }
+
+    .greet {
+        @apply text-xl text-white font-extralight text-center mb-2
+        md:text-2xl 
+        lg:text-3xl ;
+    }
+
+    .row {
+        @apply flex flex-row text-7xl items-center
+    }
+    
+    .name {
+        @apply text-4xl px-20 text-white font-semibold text-center
+        md:text-6xl px-0
+        lg:text-7xl px-0;
+    }
+
+    .typewriter {
+        @apply text-lg mt-2 text-white font-light tracking-wide text-center 
+        md:text-2xl 
+        lg:mt-5 lg:text-3xl
+    }
+
+    /* Projects */
+    .projectsTitle {
+        @apply font-medium text-white text-center text-5xl 
+        md:text-6xl
+        lg:text-6xl lg:mb-20 
+    }
+
+    .itemCardsContainer {
+        @apply h-full items-center justify-center overflow-hidden my-10
+        lg:flex lg:snap-always lg:snap-center
+    }
+
+    /* .bodyCard { @apply w-auto h-auto ease-in-out px-5 } */
+
+    .imageCard { @apply rounded-xl object-contain ease-in-out }
+
+    .contentWrapper { @apply lg:px-0 lg:pl-10 md:px-32 px-10 }
+
+    .contentTitle { @apply text-2xl font-medium text-white dark:text-white 
+        md:text-3xl
+        lg:text-3xl
+    }
+
+    .linkButton { @apply flex flex-row items-center gap-2 bg-white rounded-lg py-1 mt-2 mb-5 w-24 justify-center cursor-pointer }
+
+    .linkText { @apply text-black text-sm font-semibold tracking-tight}
+
+    /* About */
+    .aboutContainer { @apply flex flex-col items-center }
+
+    .aboutTitle { 
+        @apply relative -bottom-5 text-white text-center text-6xl 
+        md:-bottom-16 font-normal md:text-8xl 
+        lg:text-8xl lg:-bottom-28 lg:mt-20
+    }
+
+    .aboutDesc { 
+        @apply w-full text-xs font-light relative bottom-32 px-10 whitespace-pre-wrap drop-shadow-2xl text-center italic
+        md:text-sm md:w-[40rem] md:bottom-52
+        lg:text-sm lg:w-[60rem] lg:px-32 lg:bottom-48
+    }
+
+    .aboutImg { @apply -top-12 lg:top-0 }
+}                                                                               
+* { 
+    font-family: Poppins, system-ui, Avenir, Helvetica, Arial, sans-serif;
+} 
+
+img {
+    pointer-events: none;
+}
+
+/* Native CSS */
+/* Image Card Projects */
+.imageCard:hover {
+    transition: ease-in-out .5s;
+    filter: drop-shadow(0 0 0.50rem rgb(113, 96, 212));
+}
+
+/* Projects */
+.image {
+    image-rendering: pixelated;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+/* About */
+.aboutImgContainer {
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+}
+
+.aboutImg {
+    position: relative;
+    filter: drop-shadow(0 0 0.75rem #111111);
+}
+
+.scale {
+    transition: ease-in-out .3s all;
+}
+
+.scale:hover {
+    transform: scale(0.9);
+}
