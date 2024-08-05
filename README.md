@@ -1,4 +1,4 @@
-# LandingPage Framer Motion - ReactJS
+# LandingPage Framer Motion - ReactJS - TypeScript
 
 - ReactJS
 - TypeScript
